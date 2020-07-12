@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--    체크박스 들어갈 영역(평소에는 invisible)-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="12"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <CheckBox
+                android:id="@+id/chk_memo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#666666"
+                android:padding="20dp"
+                android:scaleX="1.1"
+                android:scaleY="1.1" />
+
+        </LinearLayout>
+
+        <!--    중간 요약내용 부분-->
+        <LinearLayout
+            android:id="@+id/touchAreaToLoadMemo"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="75"
+            android:background="@android:color/transparent"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/btn_summaryToBeFilled"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:text="메모내용이 여기에 들어갑니다"
+                android:textColor="#666666"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--    오른쪽 날짜 부분-->
+        <LinearLayout
+            android:id="@+id/touchAreaToLoadMemo_2"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="25"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/tv_dateToBeFilled"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="6월 2일"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD" />
+
+</LinearLayout>
